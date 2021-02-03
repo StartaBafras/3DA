@@ -189,8 +189,9 @@ class see_order(QWidget):
             self.load()
         except sqlite3.OperationalError:
             QMessageBox.about(self,"sqlite3.OperationalError","Veritabanına bağlanılamadı lütfen yeniden oluşturmayı deneyin veya geliştirici ile iletişime geçin")
+        except AttributeError:
+            QMessageBox.about(self,"AttributeError","Listeden herhangi bir seçim yapılmadı")
 
-        
 
 
 
