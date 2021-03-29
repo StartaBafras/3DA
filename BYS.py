@@ -460,7 +460,7 @@ class calculate_cost(QWidget):
 
             con=sqlite3.connect("printer.db")
             cursor=con.cursor()
-            cursor.execute("insert into orders values(?,?,?,?,?,?,?,?)",(name,file_adress,fi,fi_co,el,el_co,to_co,date))  
+            cursor.execute("insert into costs values(?,?,?,?,?,?,?,?)",(name,file_adress,fi,fi_co,el,el_co,to_co,date))  
             con.commit()
             con.close()
             QMessageBox.about(self,"Veritabanı","Kayıt Edildi")

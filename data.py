@@ -10,6 +10,6 @@ def create():
     cur.execute("insert into stock values(?,?,?,?,?,?,?)",('İsim','Dosya','Alıcı','Miktar','Tarih','Maliyet','Basım Süresi'))
 
     cur.execute("create table if not exists costs('name','file','filament','f_amount','electirc','time','cost','date')")
-    cur.execute("insert into costs values(?,?,?,?,?,?,?,?)",('İsim','Dosya','Filament Fiyatı (₺)','Filament Miktarı (gr)','Elektirik Sarfiyatı (₺)','Basım Süresi','Toplam Maliyet','Tarih'))
+    cur.execute("insert into costs values(?,?,?,?,?,?,?,?)",('İsim','Dosya','Filament Fiyatı (₺)','Filament Miktarı (gr)','Elektirik Sarfiyatı (₺)','Basım Süresi (dk)','Toplam Maliyet','Tarih'))
     con.commit()
     con.close()
