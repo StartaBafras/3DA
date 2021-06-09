@@ -168,7 +168,7 @@ class add_order(QWidget):
             data = cursor.fetchall()
             print(data[0][5])#index dışına düşüp düşmeyeceğini kontrol etmek için yazdırıyoruz
 
-            cursor.execute("insert into orders values(?,?,?,?,?,?,?)",(name,o_file,owner,amount,date,data[0][5],data[0][6]))
+            cursor.execute("insert into orders values(?,?,?,?,?,?,?)",(name,o_file,owner,amount,date,data[0][6],data[0][5])) #Hatalı mı ?
             
             con.commit()
             con.close()
